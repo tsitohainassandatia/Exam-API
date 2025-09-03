@@ -1,8 +1,16 @@
 from fastapi import FastAPI
 from starlette.responses import Response
+from starlette.responses import JSONResponse
 
 app = FastAPI()
 
-@app.get('/ping')
+#question 1
+# a-
+@app.get('/health')
 def ping():
-    return Response ("pong", status_code=300)
+    return Response ("OK")
+
+# b-
+@app.post('/phones')
+def phones(id: str = "non defini"):
+    return JSONResponse( {id},status_code=201)
