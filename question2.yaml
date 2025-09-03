@@ -1,0 +1,18 @@
+openapi: 3.0.3
+info:
+  title: STD24098
+  version: 1.0.0
+  description: This is specifications of STD24098
+servers:
+  - url: http://localhost:8000
+paths:
+  /heath:
+    get:
+    Response:
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: 
+                example: OK
+      
